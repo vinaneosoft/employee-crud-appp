@@ -27,6 +27,7 @@ export function Navbar(){
       </form>
     </div>
   </div>
+  
 </nav>
     );
 }
