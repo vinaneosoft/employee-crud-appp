@@ -1,10 +1,13 @@
-
+import { Header } from './Header/Header';
 import './App.css';
 
 function App() {
   return (
-    <h1 class='mainHeading'>EMPLOYEE MANAGEMENT</h1> /* jsx element */
-  
+    /* jsx element */
+   <>
+     <h1 className='mainHeading'>EMPLOYEE MANAGEMENT</h1> 
+     <Header></Header>
+   </>
   );
 }
 
