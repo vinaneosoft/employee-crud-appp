@@ -6,7 +6,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
+        <p> <b>Vina Patil</b>
           Edit <code>src/App.js</code> and save to reload.
         </p>
         <a
@@ -22,4 +22,20 @@ function App() {
   );
 }
 
+function test1(){
+}
+ function test2(){
+}
+
+
+export {test1, test2}
+
 export default App;
+
+
+ /*A module cannot have multiple default exports.*/
+
+
+// from one module we can export n properties
+// u can export more than one pr with normal export
+// u can export only one pr as default export

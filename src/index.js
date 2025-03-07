@@ -1,8 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import App from './App'; // u can use alias direct e.g.  import Ap from './App'; 
 import reportWebVitals from './reportWebVitals';
+
+/* import { test1, test2 } from './App'; // import { test1 as t1, test2 as t2 }
+import * as app from './App';
+app.test1();
+app.test2();
+test1();
+test2();
+ */
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
