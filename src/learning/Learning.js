@@ -12,7 +12,7 @@ export function Learning(){
         else
             return 'NOT ALLOWED';
     }
-    const courseType="front end";
+    const courseType="all";
     const getLearners=()=>{
         if(courseType=="front end")
             return <FrontEndLearners/>
