@@ -1,6 +1,9 @@
 export function FrontEndLearners(){
     const femployees=['Sarita Pawar','Harish Trivedi', 'Karan Sanu'];
     return (
-        <p>{femployees}</p>
+       <div>
+         <h4>Front End Learners</h4>
+         <p>{femployees}</p>
+       </div>
     );
 }
