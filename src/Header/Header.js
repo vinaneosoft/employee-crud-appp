@@ -1,10 +1,13 @@
+/* {} : JSZ expressions, data binding */
+
 import './Header.css';
 import { Navbar } from '../navbar/Navbar';
 /* functional component */
 export function Header(){
+    const subHeading="EMPLOYEE OPERATIONS"; // local variable
     return(
         <header className="topheader">
-            <h2>EMPLOYEE CRUD OPERATIONS</h2>
+            <h2>{subHeading}</h2>
             <Navbar></Navbar>
         </header>
         

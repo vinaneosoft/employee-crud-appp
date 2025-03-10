@@ -1,5 +1,6 @@
 import { Header } from './header/Header';
 import './App.css';
+import { Learning } from './learning/Learning';
 
 function App() {
   return (
@@ -7,6 +8,7 @@ function App() {
    <>
      <h1 className='mainHeading'>EMPLOYEE MANAGEMENT</h1> 
      <Header></Header>
+     <Learning></Learning>
    </>
   );
 }
