@@ -7,7 +7,7 @@
 
 export function FrontEndLearners(){
     const femployees=['Sarita Pawar','Harish Trivedi', 'Karan Sanu', 'Vina Sarnobat'];
-    const lielements=femployees.map(femp=><li>{femp}</li>)
+    const lielements=femployees.map((femp, index)=><li key={"fe"+index}>{femp}</li>)
     return (
        <div>
          <h4>Front End Learners</h4>
