@@ -6,11 +6,13 @@ import { Employees } from './employees/Employees';
 
 /* UI merge  */
 function App() {
-  const mainHeading="EMPLOYEE MANAGEMENT";
+  const mainHeading="EMPLOYEE MANAGEMENT"; 
+  const companyName="Neosoft";// we will make changes in heading , changes will be reflected in child
   return (
    <>
-     <h1 className='mainHeading'>{mainHeading}</h1> 
-     <Header mheading={mainHeading}></Header> 
+     <h1 className='mainHeading'>{mainHeading}, <small>{companyName}</small></h1> 
+     <Header mheading={mainHeading} cname={companyName}></Header> 
+    {/*  <Learning></Learning> */}
     <Employees></Employees>
    </>
   );

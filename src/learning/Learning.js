@@ -12,7 +12,8 @@ export function Learning(){
         else
             return 'NOT ALLOWED';
     }
-    const courseType="all";
+    const courseType="front end";
+    const courseName="React.js";
     const getLearners=()=>{
         if(courseType=="front end")
             return <FrontEndLearners/>
@@ -41,7 +42,7 @@ export function Learning(){
                 <h3>Course Learners</h3>
                 <div>
                     {
-                        courseType=="front end" ? <FrontEndLearners></FrontEndLearners> 
+                        courseType=="front end" ? <FrontEndLearners courseName={courseName}></FrontEndLearners> 
                         : courseType=="back end" ? <BackEndLearners></BackEndLearners> 
                         : <><FrontEndLearners></FrontEndLearners> <BackEndLearners></BackEndLearners></>
                     }
