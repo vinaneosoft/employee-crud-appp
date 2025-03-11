@@ -1,7 +1,7 @@
 import { Header } from './header/Header';
 import './App.css';
 import { Learning } from './learning/Learning';
-import { EmployeeCard } from './employeecard/EmployeeCard';
+
 import { Employees } from './employees/Employees';
 
 /* UI merge  */

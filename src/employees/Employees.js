@@ -49,7 +49,7 @@ export function Employees(){
     ]
 
     /* mutiple cards : EmployeeCard: reused it  */
-    const empcards=neoemployees.map((employee, index)=><EmployeeCard key={"empcard"+index} />) 
+    const empcards=neoemployees.map((employee, index)=><EmployeeCard key={"empcard"+index} employee={employee} />) 
     /*UI : JSX, JS{}*/
     return( 
         <section className="d-flex flex-wrap justify-content-evenly">
