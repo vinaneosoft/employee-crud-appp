@@ -2,6 +2,7 @@ import { Header } from './header/Header';
 import './App.css';
 import { Learning } from './learning/Learning';
 import { EmployeeCard } from './employeecard/EmployeeCard';
+import { Employees } from './employees/Employees';
 
 /* UI merge  */
 function App() {
@@ -10,7 +11,7 @@ function App() {
    <>
      <h1 className='mainHeading'>EMPLOYEE MANAGEMENT</h1> 
      <Header></Header>
-     <EmployeeCard></EmployeeCard>
+    <Employees></Employees>
    </>
   );
 }

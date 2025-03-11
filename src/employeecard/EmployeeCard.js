@@ -1,5 +1,5 @@
 
-
+/* single card design */
 export function EmployeeCard(){
     return (
         <div className="card" style={{width: "18rem"}}>

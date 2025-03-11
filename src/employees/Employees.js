@@ -1,8 +1,7 @@
-
-
+import { EmployeeCard } from "../employeecard/EmployeeCard";
+import "./Employees.css";
 
 export function Employees(){
-
     // array of employees
     const neoemployees=[
         {
@@ -25,7 +24,37 @@ export function Employees(){
             departmentCode:"JS",
             joiningDate:new Date('2 Dec 2018'),
             experience:5
+        },
+        {
+            employeeId:111,
+            employeeName:"Pravin Pawar",
+            departmentCode:"JS",
+            joiningDate:new Date('2 Dec 2018'),
+            experience:5
+        },
+        {
+            employeeId:111,
+            employeeName:"Pravin Pawar",
+            departmentCode:"JS",
+            joiningDate:new Date('2 Dec 2018'),
+            experience:5
+        },
+        {
+            employeeId:111,
+            employeeName:"Pravin Pawar",
+            departmentCode:"JS",
+            joiningDate:new Date('2 Dec 2018'),
+            experience:5
         }
     ]
 
+    /* mutiple cards : EmployeeCard: reused it  */
+    const empcards=neoemployees.map(employee=><EmployeeCard/>) 
+    /*UI : JSX, JS{}*/
+    return( 
+        <section className="d-flex flex-wrap justify-content-evenly">
+            {empcards}
+        </section>
+    );
+   
 }
