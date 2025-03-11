@@ -3,6 +3,7 @@ import './App.css';
 import { Learning } from './learning/Learning';
 import { EmployeeCard } from './employeecard/EmployeeCard';
 
+/* UI merge  */
 function App() {
   return (
     /* jsx element */
