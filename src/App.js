@@ -6,11 +6,11 @@ import { Employees } from './employees/Employees';
 
 /* UI merge  */
 function App() {
+  const mainHeading="EMPLOYEE MANAGEMENT";
   return (
-    /* jsx element */
    <>
-     <h1 className='mainHeading'>EMPLOYEE MANAGEMENT</h1> 
-     <Header></Header>
+     <h1 className='mainHeading'>{mainHeading}</h1> 
+     <Header mheading={mainHeading}></Header> 
     <Employees></Employees>
    </>
   );

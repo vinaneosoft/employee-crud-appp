@@ -3,12 +3,12 @@
 import './Header.css';
 import { Navbar } from '../navbar/Navbar';
 /* functional component */
-export function Header(){
+export function Header(propobj){
     const subHeading="EMPLOYEE OPERATIONS"; // local variable
     return(
         <header className="topheader">
             <h2>{subHeading}</h2>
-            <Navbar></Navbar>
+            <Navbar mheading={propobj.mheading}></Navbar>
         </header>
         
     );

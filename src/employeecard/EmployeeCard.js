@@ -7,14 +7,14 @@ export function EmployeeCard(){
             <div className="card-body">
                 <h5 className="card-title"><span>#id</span> <span>Employee Name</span></h5>
             </div>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">Department Code</li>
-                <li class="list-group-item">Joined on</li>
-                <li class="list-group-item">Experience</li>
+            <ul className="list-group list-group-flush">
+                <li className="list-group-item">Department Code</li>
+                <li className="list-group-item">Joined on</li>
+                <li className="list-group-item">Experience</li>
             </ul>
-            <div class="card-body">
-                <a href="#" class="card-link">EDIT</a>
-                <a href="#" class="card-link">DELETE</a>
+            <div className="card-body">
+                <a href="#" className="card-link">EDIT</a>
+                <a href="#" className="card-link">DELETE</a>
             </div>
         </div>
     );
