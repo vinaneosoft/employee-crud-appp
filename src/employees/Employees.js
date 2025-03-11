@@ -6,46 +6,45 @@ export function Employees(){
     const neoemployees=[
         {
             employeeId:111,
-            employeeName:"Pravin Kumar",
+            employeeName:"Pravina Kumar",
             departmentCode:"PT",
             joiningDate:new Date('2 Jan 2018'),
-            experience:10
+            experience:10,
+            employeePic:"https://th.bing.com/th/id/OIP.6dEHUdq-yfCqbEULVoOYKgHaE8?rs=1&pid=ImgDetMain"
         },
         {
             employeeId:112,
             employeeName:"Sameer Kumar",
             departmentCode:"PT",
             joiningDate:new Date('3 Jan 2018'),
-            experience:12
+            experience:12,
+            employeePic:"https://www.nordstudio.ch/wp/wp-content/uploads/2018/02/mitarbeiter-business-fotos_08.jpg"
         },
         {
             employeeId:113,
             employeeName:"Pravin Pawar",
             departmentCode:"JS",
             joiningDate:new Date('2 Dec 2018'),
-            experience:5
+            experience:5,
+             employeePic:"https://www.nordstudio.ch/wp/wp-content/uploads/2018/02/mitarbeiter-business-fotos_08.jpg"
         },
         {
             employeeId:114,
             employeeName:"Pravin Pawar",
             departmentCode:"JS",
             joiningDate:new Date('2 Dec 2018'),
-            experience:5
+            experience:5,
+             employeePic:"https://www.nordstudio.ch/wp/wp-content/uploads/2018/02/mitarbeiter-business-fotos_08.jpg"
         },
         {
             employeeId:115,
             employeeName:"Pravin Pawar",
             departmentCode:"JS",
             joiningDate:new Date('2 Dec 2018'),
-            experience:5
-        },
-        {
-            employeeId:116,
-            employeeName:"Pravin Pawar",
-            departmentCode:"JS",
-            joiningDate:new Date('2 Dec 2018'),
-            experience:5
+            experience:5,
+             employeePic:"https://www.nordstudio.ch/wp/wp-content/uploads/2018/02/mitarbeiter-business-fotos_08.jpg"
         }
+      
     ]
 
     /* mutiple cards : EmployeeCard: reused it  */

@@ -3,7 +3,7 @@
 export function EmployeeCard({employee}){
     return (
         <div className="card" style={{width: "18rem", margin:"10px"}}>
-            <img src="https://st2.depositphotos.com/1594308/8523/i/450/depositphotos_85237228-stock-photo-happy-businessman-with-touchpad.jpg" className="card-img-top"  />
+            <img src={employee.employeePic} className="card-img-top"  />
             <div className="card-body">
                 <h5 className="card-title"><span>#{employee.employeeId}</span> <span>{employee.employeeName}</span></h5>
             </div>
