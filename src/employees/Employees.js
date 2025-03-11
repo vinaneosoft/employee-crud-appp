@@ -12,35 +12,35 @@ export function Employees(){
             experience:10
         },
         {
-            employeeId:121,
+            employeeId:112,
             employeeName:"Sameer Kumar",
             departmentCode:"PT",
             joiningDate:new Date('3 Jan 2018'),
             experience:12
         },
         {
-            employeeId:212,
+            employeeId:113,
             employeeName:"Pravin Pawar",
             departmentCode:"JS",
             joiningDate:new Date('2 Dec 2018'),
             experience:5
         },
         {
-            employeeId:111,
+            employeeId:114,
             employeeName:"Pravin Pawar",
             departmentCode:"JS",
             joiningDate:new Date('2 Dec 2018'),
             experience:5
         },
         {
-            employeeId:111,
+            employeeId:115,
             employeeName:"Pravin Pawar",
             departmentCode:"JS",
             joiningDate:new Date('2 Dec 2018'),
             experience:5
         },
         {
-            employeeId:111,
+            employeeId:116,
             employeeName:"Pravin Pawar",
             departmentCode:"JS",
             joiningDate:new Date('2 Dec 2018'),
@@ -52,7 +52,7 @@ export function Employees(){
     const empcards=neoemployees.map((employee, index)=><EmployeeCard key={"empcard"+index} employee={employee} />) 
     /*UI : JSX, JS{}*/
     return( 
-        <section className="d-flex flex-wrap justify-content-evenly">
+        <section className="d-flex flex-wrap justify-content-evenly bg-dark">
             {empcards}
         </section>
     );
