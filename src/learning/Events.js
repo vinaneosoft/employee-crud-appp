@@ -24,10 +24,16 @@ export function Events(){
     function changeBackground(newbackcolor){
         /* react rule : every object is immutable */
        // headingStyle.background=newbackcolor // error
-        setBackColor({...headingStyle,background:newbackcolor});
+        setBackColor({...headingStyle,background:newbackcolor,fontStyle:"italic" });
     }
     
+    let [locations, setNewLoc]=useState(['Dadar, Mumbai','Parel, Mumbai','Rabale, Mumbai']);
 
+    function addLocation(newLoc){
+       // let newarry=locations.map(loc=>loc);
+       // newarry.push(newLoc);
+        setNewLoc([...locations,newLoc]);
+    }
     return(<div>
         <h4 onMouseOver={()=>changeBackground("pink")} style={headingStyle}>{companyName}</h4>
         <button onClick={()=>change("Neosoft")}>CHANGE COMPANY NAME</button>
@@ -35,6 +41,8 @@ export function Events(){
             {companyAddress}
         </p>
         <button>CHANGE ADDRESS</button>
+        <div><ul>{locations.map(location=><li>{location}</li>)}</ul></div>
+        <button onClick={()=>addLocation('Ahmadabad')}>Add new company location</button>
     </div>);
 }
 
