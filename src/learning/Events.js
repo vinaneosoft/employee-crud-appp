@@ -13,11 +13,16 @@ export function Events(){
 
     let inputRef=useRef();    // 1.
 
+    let addressRef=useRef();
     function change(){
        // console.log(inputRef);
         //console.log(inputRef.current.value);
        // companyName=newname; // new state it wont work
         setName(inputRef.current.value); // this will work
+    }
+    function changeAddress(){
+        console.log(addressRef.current.value);
+        setAddress(addressRef.current.value)
     }
 
     let [headingStyle, setBackColor]=useState({
@@ -45,10 +50,13 @@ export function Events(){
         <button onClick={change}>CHANGE COMPANY NAME</button>
        </section>
         <hr/>
-        <p>
+       <section>
+       <p>
             {companyAddress}
         </p>
-        <button>CHANGE ADDRESS</button>
+        <input type="text" onKeyUp={changeAddress} ref={addressRef} placeholder="add address" />
+       </section>
+       <hr />
         <div><ul>{locations.map((location,index)=><li key={index}>{location}</li>)}</ul></div>
         <button onClick={()=>addLocation('Ahmadabad')}>Add new company location</button>
     </div>);
