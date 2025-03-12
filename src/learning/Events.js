@@ -2,7 +2,7 @@
 state management concepts in react
 Hook : useState */
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 import { dadarAddress } from "../businesslogic/companyaddress";
 
@@ -10,10 +10,14 @@ export function Events(){
     /* [variable holding a state, function reference to set new state]*/
     let [companyName, setName]=useState("Neosoft Technologies");
     let [companyAddress, setAddress]=useState(dadarAddress);
-    function change(newname){
-        console.log("in change funciton");
+
+    let inputRef=useRef();    // 1.
+
+    function change(){
+       // console.log(inputRef);
+        //console.log(inputRef.current.value);
        // companyName=newname; // new state it wont work
-        setName(newname); // this will work
+        setName(inputRef.current.value); // this will work
     }
 
     let [headingStyle, setBackColor]=useState({
@@ -35,13 +39,17 @@ export function Events(){
         setNewLoc([...locations,newLoc]);
     }
     return(<div>
+       <section>
         <h4 onMouseOver={()=>changeBackground("pink")} style={headingStyle}>{companyName}</h4>
-        <button onClick={()=>change("Neosoft")}>CHANGE COMPANY NAME</button>
+        <input type="text" name="cname" ref={inputRef} /> 
+        <button onClick={change}>CHANGE COMPANY NAME</button>
+       </section>
+        <hr/>
         <p>
             {companyAddress}
         </p>
         <button>CHANGE ADDRESS</button>
-        <div><ul>{locations.map(location=><li>{location}</li>)}</ul></div>
+        <div><ul>{locations.map((location,index)=><li key={index}>{location}</li>)}</ul></div>
         <button onClick={()=>addLocation('Ahmadabad')}>Add new company location</button>
     </div>);
 }
