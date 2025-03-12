@@ -10,10 +10,11 @@ export function Events(){
     /* [variable holding a state, function reference to set new state]*/
     let [companyName, setName]=useState("Neosoft Technologies");
     let [companyAddress, setAddress]=useState(dadarAddress);
+    let [departmentName, setDepartment]=useState("Python"); //Pytho, Pyth
 
     let inputRef=useRef();    // 1.
-
     let addressRef=useRef();
+
     function change(){
        // console.log(inputRef);
         //console.log(inputRef.current.value);
@@ -59,6 +60,12 @@ export function Events(){
        <hr />
         <div><ul>{locations.map((location,index)=><li key={index}>{location}</li>)}</ul></div>
         <button onClick={()=>addLocation('Ahmadabad')}>Add new company location</button>
+        <hr></hr>
+        <section>
+            <b>{departmentName}</b> {/*Pytho, Pyth */}
+            {/* controlled ip : value attr, onChange */}
+            <input type="text" placeholder="enter department" value={departmentName} onChange={(e)=>setDepartment(e.target.value)} ></input>
+        </section>
     </div>);
 }
 
