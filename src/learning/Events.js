@@ -64,7 +64,8 @@ export function Events(){
         <section>
             <b>{departmentName}</b> {/*Pytho, Pyth */}
             {/* controlled ip : value attr, onChange */}
-            <input type="text" placeholder="enter department" value={departmentName} onChange={(e)=>setDepartment(e.target.value)} ></input>
+            <input type="text" placeholder="enter department" value={departmentName} 
+            onChange={(e)=>setDepartment(e.target.value)} ></input>
         </section>
     </div>);
 }
