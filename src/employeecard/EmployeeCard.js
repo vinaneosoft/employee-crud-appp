@@ -1,6 +1,18 @@
 
 /* single card design */
 export function EmployeeCard({employee}){
+
+    function showAlert(){
+        alert("Delete link clicked");
+    }
+
+    function showEmployeeId(id){
+        alert(id);
+    }
+
+
+
+
     return (
         <div className="card" style={{width: "18rem", margin:"10px"}}>
             <img src={employee.employeePic} className="card-img-top"  />
@@ -13,9 +25,13 @@ export function EmployeeCard({employee}){
                 <li className="list-group-item"><i>Experience : </i><b>{employee.experience} years</b></li>
             </ul>
             <div className="card-body">
-                <a href="#" className="card-link">EDIT</a>
-                <a href="#" className="card-link">DELETE</a>
+                <a href="#" className="card-link" onClick={()=>alert("Edit link clicked")}>EDIT</a>
+                <a href="#" className="card-link" onClick={showAlert}>DELETE</a> {/* ()=>showAlert()  */}
+                <a href="#" className="card-link" onClick={()=>{showEmployeeId(employee.employeeId)}}>test</a>
             </div>
         </div>
     );
 }
+
+
+

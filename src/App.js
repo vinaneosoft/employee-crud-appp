@@ -3,6 +3,7 @@ import './App.css';
 import { Learning } from './learning/Learning';
 
 import { Employees } from './employees/Employees';
+import { Events } from './learning/Events';
 
 /* UI merge  */
 function App() {
@@ -12,7 +13,7 @@ function App() {
    <>
      <h1 className='mainHeading'>{mainHeading}, <small>{companyName}</small></h1> 
      <Header mheading={mainHeading} cname={companyName}></Header> 
-   <Learning></Learning> 
+    <Events></Events>
     <Employees></Employees>
    </>
   );
