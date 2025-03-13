@@ -1,9 +1,9 @@
 import { Header } from './header/Header';
 import './App.css';
-import { Learning } from './learning/Learning';
+//import { Learning } from './learning/Learning';
 
 import { Employees } from './employees/Employees';
-import { Events } from './learning/Events';
+//import { Events } from './learning/Events';
 import { EmployeeForm } from './employeeform/EmployeForm';
 
 /* UI merge  */
