@@ -5,6 +5,7 @@ import './App.css';
 import { Employees } from './employees/Employees';
 //import { Events } from './learning/Events';
 import { EmployeeForm } from './employeeform/EmployeForm';
+import { Hooks } from './learning/Hooks';
 
 /* UI merge  */
 function App() {
@@ -14,8 +15,9 @@ function App() {
    <>
      <h1 className='mainHeading'>{mainHeading}, <small>{companyName}</small></h1> 
      <Header mheading={mainHeading} cname={companyName}></Header> 
-    <EmployeeForm></EmployeeForm>
-    <Employees></Employees>
+     <Hooks></Hooks>
+     <hr></hr>
+     <Hooks></Hooks>
    </>
   );
 }

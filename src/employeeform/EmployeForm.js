@@ -19,13 +19,13 @@ export function EmployeeForm(){
        // let newemployee={employeeName:ev.target.value} // u have to repeat all the keys again
         //console.log(ev.target.id);
         //setName(ev.target.value);
-        setEmployee({...employee, [ev.target.name]:ev.target.value});
+        setEmployee({...employee, [ev.target.name]:ev.target.value}); // copy, key value replace
       
     }
     /* useEffect : to manage lifecycle of functional component
     1. intially useEffect gets called when componets gets mounted
     ( note : in development mode components gets mounted 2 times)
-    2. after that useEffect hook gets called everytime whenever state of variables get changed */
+    2. after that useEffect hook gets called everytime when UI gets updated due to state change in variable */
     useEffect(()=>{
         /* later we will pass this object to the backend */
         console.log(employee); 
@@ -64,11 +64,6 @@ export function EmployeeForm(){
             <button type="submit" className="btn btn-primary">Submit</button>
             <button type="reset" className="btn btn-primary">Reset</button>
         </form>
-        <hr></hr>
-        <p>{employee.employeeName}</p>
-        <p>{employee.departmentCode}</p>
-        <p>{employee.experience}</p>
-        <p>{employee.joiningDate}</p>
         </div>
       
     );
