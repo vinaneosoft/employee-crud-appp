@@ -1,25 +1,43 @@
+import { useState } from "react";
 
 export function EmployeeForm(){
+    let [employee, setEmployee]=useState( {
+        employeeId:"",
+        employeeName:"",
+        departmentCode:"",
+        joiningDate:"",
+        experience:"",
+        employeePic:""
+    });
+
+
+    function getDetails(ev){
+        console.log(ev.target.value);
+        //setName(ev.target.value);
+    }
+
+
+
     return(
-        <>
-        <h1>Employee Form</h1>
-        <form>
-            <div class="mb-3">
-                <label for="exampleInputName" class="form-label">Name</label>
-                <input type="text" class="form-control" id="exampleInputName" />
+        <div className="border border-5 border-info bg-dark text-white" style={{margin:'5px 100px'}}>
+        <h4 className="text-center">Employee Form</h4>
+        <form className="m-5">
+            <div className="mb-3">
+                <label htmlFor="exampleInputName" className="form-label">Name</label>
+                <input type="text" className="form-control" value={employee.employeeName} onChange={getDetails} id="exampleInputName" />
             </div>
-            <div class="mb-3">
-                <label for="exampleInputNumber1" class="form-label">Experience</label>
-                <input type="number" class="form-control" id="exampleInputNumber1" />
+            <div className="mb-3">
+                <label htmlFor="exampleInputNumber1" className="form-label">Experience</label>
+                <input type="number" className="form-control" id="exampleInputNumber1" value={employee.experience} onChange={getDetails}  />
             </div>
-            <div class="mb-3">
-                <label for="exampleInputNumber1" class="form-label">Date Of Join</label>
-                <input type="datetime-local" class="form-control" id="exampleInputNumber1" />
+            <div className="mb-3">
+                <label htmlFor="exampleInputNumber1" className="form-label">Date Of Join</label>
+                <input type="datetime-local" className="form-control" id="exampleInputNumber1" value={employee.joiningDate} onChange={getDetails}  />
             </div>
-            <div class="mb-3">
-                <label for="exampleInputNumber1" class="form-label">Department</label>
-                <select class="form-select" aria-label="Default select example">
-                    <option selected>Python</option>
+            <div className="mb-3">
+                <label htmlFor="exampleInputNumber1" className="form-label">Department</label>
+                <select className="form-select" aria-label="Default select example" value={employee.departmentCode} onChange={getDetails} >
+                    <option value="PT">Python</option>
                     <option value="JS">JavaScript</option>
                     <option value="AD">Android</option>
                     <option value="IOS">IOS</option>
@@ -27,10 +45,12 @@ export function EmployeeForm(){
                     <option value="RJS">ReactJS</option>
                 </select>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-            <button type="reset" class="btn btn-primary">Reset</button>
+            <button type="submit" className="btn btn-primary">Submit</button>
+            <button type="reset" className="btn btn-primary">Reset</button>
         </form>
-        </>
+        <hr></hr>
+        <p>{employee.employeeName}</p>
+        </div>
       
     );
 }

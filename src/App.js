@@ -4,6 +4,7 @@ import { Learning } from './learning/Learning';
 
 import { Employees } from './employees/Employees';
 import { Events } from './learning/Events';
+import { EmployeeForm } from './employeeform/EmployeForm';
 
 /* UI merge  */
 function App() {
@@ -13,7 +14,7 @@ function App() {
    <>
      <h1 className='mainHeading'>{mainHeading}, <small>{companyName}</small></h1> 
      <Header mheading={mainHeading} cname={companyName}></Header> 
-    <Events></Events>
+    <EmployeeForm></EmployeeForm>
     <Employees></Employees>
    </>
   );
