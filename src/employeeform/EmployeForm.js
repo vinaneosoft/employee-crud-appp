@@ -17,10 +17,9 @@ export function EmployeeForm(){
         console.log(ev.target.name);
         //employee.employeeName=ev.target.value // mutable : wrong : rule : every object is immutable
        // let newemployee={employeeName:ev.target.value} // u have to repeat all the keys again
-       let newemployee= {...employee, [ev.target.name]:ev.target.value}
         //console.log(ev.target.id);
         //setName(ev.target.value);
-        setEmployee(newemployee);
+        setEmployee({...employee, [ev.target.name]:ev.target.value});
       
     }
     /* useEffect : to manage lifecycle of functional component
