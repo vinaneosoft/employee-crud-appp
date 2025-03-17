@@ -6,22 +6,30 @@ import reportWebVitals from './reportWebVitals';
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap/dist/js/bootstrap.bundle.min"
 import { RouterProvider } from 'react-router/dom';
-import { createBrowserRouter } from 'react-router';
-
-/* import { test1, test2 } from './App'; // import { test1 as t1, test2 as t2 }
-import * as app from './App';
-app.test1();
-app.test2();
-test1();
-test2();
- */
+import { createBrowserRouter, redirect } from 'react-router';
+import { AdminLogin } from './adminlogin/AdminLogin';
 
 
 
 let routes=[
   {
     path:'/',
-    element:  <App />
+    element:  <App />,
+    children :[
+       /*  {
+            path:'/',
+            loader:()=>{
+               redirect('adminlogin');
+            }
+        }, */
+        // when root path matches, one child must be automatically loaded
+        {
+            path:'adminlogin',
+            element:<AdminLogin />
+        }
+
+
+    ]
   }
 ]
 

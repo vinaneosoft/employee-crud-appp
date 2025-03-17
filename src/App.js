@@ -8,6 +8,7 @@ import { EmployeeForm } from './employeeform/EmployeForm';
 import { Hooks } from './learning/Hooks';
 import { Unmount } from './learning/Unmount';
 import { createContext, useState } from 'react';
+import { Outlet } from 'react-router';
 
 
 export let MyContext=createContext();
@@ -33,8 +34,11 @@ function App() {
      <MyContext value={data}>
       <Header mheading={mainHeading} cname={companyName}></Header> 
      <b>below header there will be dynamic section</b>
-
     
+      <div  className="border border-3">
+      <Outlet></Outlet> {/* Outlet component used to load child elements on route match*/}
+      </div>
+     
     <div>keep footer component here</div>
      </MyContext>
    </>
