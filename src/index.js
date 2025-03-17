@@ -17,12 +17,10 @@ let routes=[
     path:'/',
     element:  <App />,
     children :[
-       /*  {
+        {
             path:'/',
-            loader:()=>{
-               redirect('adminlogin');
-            }
-        }, */
+            loader:()=>redirect('adminlogin')
+        }, 
         // when root path matches, one child must be automatically loaded
         {
             path:'adminlogin',
