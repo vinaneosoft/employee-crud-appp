@@ -7,7 +7,7 @@ import { Employees } from './employees/Employees';
 import { EmployeeForm } from './employeeform/EmployeForm';
 import { Hooks } from './learning/Hooks';
 import { Unmount } from './learning/Unmount';
-import { createContext } from 'react';
+import { createContext, useState } from 'react';
 
 export let MyContext=createContext();
 /* UI merge  */
@@ -17,13 +17,18 @@ function App() {
   const companyName="Neosoft";// we will make changes in heading , changes will be reflected in child
   
 
-  let data={
+  let [data, setData]=useState({
     cname:companyName,
     year:1988
-  }
+  });
+  // after 3 seconds, want to change year to 1990
+  setTimeout(() => {
+    setData({...data, year:1990})
+  }, 3000);
   return (
    <>
      <h1 className='mainHeading'>{mainHeading}, <small>{companyName}</small></h1> 
+     <b>{data.year}</b>
      <MyContext.Provider value={data}>
       <Header mheading={mainHeading} cname={companyName}></Header> 
       <Learning></Learning>
