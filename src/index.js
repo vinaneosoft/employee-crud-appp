@@ -8,6 +8,7 @@ import "bootstrap/dist/js/bootstrap.bundle.min"
 import { RouterProvider } from 'react-router/dom';
 import { createBrowserRouter, redirect } from 'react-router';
 import { AdminLogin } from './adminlogin/AdminLogin';
+import { Employees } from './employees/Employees';
 
 
 
@@ -26,6 +27,13 @@ let routes=[
         {
             path:'adminlogin',
             element:<AdminLogin />
+        },
+        {
+            path:'employees',
+            element:<Employees />
+        },
+        {
+            /* path for Home component, element : <Home/> */
         }
 
 
