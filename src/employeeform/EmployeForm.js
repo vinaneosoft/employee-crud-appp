@@ -15,7 +15,8 @@ export function EmployeeForm(){
       // console.log(employee); 
         console.log(ev.target.value);
         console.log(ev.target.name);
-        //employee.employeeName=ev.target.value // mutable : wrong : rule : every object is immutable
+        //employee.employeeName=ev.target.value // mutable : wrong : 
+        // rule : every object is immutable in react
        // let newemployee={employeeName:ev.target.value} // u have to repeat all the keys again
         //console.log(ev.target.id);
         //setName(ev.target.value);

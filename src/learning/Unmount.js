@@ -7,7 +7,7 @@ export function Unmount(){
     return(
         <section>
             <button onClick={()=>setFlag(false)}>REMOVE</button>
-             {flag && <Hooks></Hooks>}
+             {flag && <Hooks></Hooks>} {/*  mount, unmount  */}
         </section>
        
     );
