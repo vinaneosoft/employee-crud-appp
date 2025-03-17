@@ -55,7 +55,7 @@ export function Hooks(){
                     So use useRef value internally in the component not to show on UI <br></br>
                     {counter3.current}</p>
                 <label>Counter 3 increment:</label>
-                <button onClick={counter3Incr}>INCREMENT ref variable, normal variable</button>
+                <button onClick={counter3Incr}>ref, normal var increment</button>
             </div>
         </article>
     );
