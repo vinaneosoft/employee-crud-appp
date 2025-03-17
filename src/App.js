@@ -16,7 +16,8 @@ function App() {
    <>
      <h1 className='mainHeading'>{mainHeading}, <small>{companyName}</small></h1> 
      <Header mheading={mainHeading} cname={companyName}></Header> 
-    <Unmount></Unmount>
+     <EmployeeForm></EmployeeForm>
+    <Employees></Employees>
     
    </>
   );
