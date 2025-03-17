@@ -9,6 +9,7 @@ import { Hooks } from './learning/Hooks';
 import { Unmount } from './learning/Unmount';
 import { createContext, useState } from 'react';
 
+
 export let MyContext=createContext();
 /* UI merge  */
 
@@ -29,10 +30,13 @@ function App() {
    <>
      <h1 className='mainHeading'>{mainHeading}, <small>{companyName}</small></h1> 
      <b>{data.year}</b>
-     <MyContext.Provider value={data}>
+     <MyContext value={data}>
       <Header mheading={mainHeading} cname={companyName}></Header> 
-      <Learning></Learning>
-     </MyContext.Provider>
+     <b>below header there will be dynamic section</b>
+
+    
+    <div>keep footer component here</div>
+     </MyContext>
    </>
   );
 }
