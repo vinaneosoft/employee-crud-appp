@@ -1,22 +1,33 @@
 import { Header } from './header/Header';
 import './App.css';
-//import { Learning } from './learning/Learning';
+import { Learning } from './learning/Learning';
 
 import { Employees } from './employees/Employees';
 //import { Events } from './learning/Events';
 import { EmployeeForm } from './employeeform/EmployeForm';
 import { Hooks } from './learning/Hooks';
 import { Unmount } from './learning/Unmount';
+import { createContext } from 'react';
 
+export let MyContext=createContext();
 /* UI merge  */
+
 function App() {
   const mainHeading="EMPLOYEE MANAGEMENT"; 
   const companyName="Neosoft";// we will make changes in heading , changes will be reflected in child
+  
+
+  let data={
+    cname:companyName,
+    year:1988
+  }
   return (
    <>
      <h1 className='mainHeading'>{mainHeading}, <small>{companyName}</small></h1> 
-     <Header mheading={mainHeading} cname={companyName}></Header> 
-      <Unmount></Unmount>
+     <MyContext.Provider value={data}>
+      <Header mheading={mainHeading} cname={companyName}></Header> 
+      <Learning></Learning>
+     </MyContext.Provider>
    </>
   );
 }
