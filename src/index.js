@@ -10,17 +10,15 @@ import { createBrowserRouter, redirect } from 'react-router';
 import { AdminLogin } from './adminlogin/AdminLogin';
 import { Employees } from './employees/Employees';
 
-
-
 let routes=[
   {
     path:'/',
     element:  <App />,
     children :[
-        {
+       /*  {
             path:'/',
             loader:()=>redirect('adminlogin')
-        }, 
+        },  */
         // when root path matches, one child must be automatically loaded
         {
             path:'adminlogin',
