@@ -9,6 +9,7 @@ import { RouterProvider } from 'react-router/dom';
 import { createBrowserRouter, redirect } from 'react-router';
 import { AdminLogin } from './adminlogin/AdminLogin';
 import { Employees } from './employees/Employees';
+import { EmployeeForm } from './employeeform/EmployeForm';
 
 let routes=[
   {
@@ -27,16 +28,20 @@ let routes=[
         {
             path:'employees',
             element:<Employees />
+        
         },
         {
-            /* path for Home component, element : <Home/> */
+            path:'addemployee',
+            element:<EmployeeForm></EmployeeForm>
         }
 
 
     ]
   }
 ]
-
+// http://localhost:3000/addemployee
+//http://localhost:3000/employees/addemployee
+//http://localhost:3000/addemployee
 let browserRouter=createBrowserRouter(routes);
 
 

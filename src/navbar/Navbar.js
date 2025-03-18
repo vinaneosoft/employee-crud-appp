@@ -18,6 +18,9 @@ const searchType="search";
         <li className="nav-item">
           <Link className="nav-link" to="employees">Show Employees</Link>
         </li>
+        <li className="nav-item">
+          <Link className="nav-link" to="addemployee">ADD NEW</Link>
+        </li>
       </ul>
       <form className="d-flex" role="search">
         <input className="form-control me-2" type={searchType} placeholder="Search" aria-label="Search" />
