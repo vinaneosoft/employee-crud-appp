@@ -4,7 +4,7 @@ import { Link } from "react-router";
 export function Navbar(props){
 const searchType="search";
     return (
-        <nav className="navbar navbar-expand-lg bg-body-tertiary">
+        <nav className="navbar navbar-expand-md bg-body-tertiary">
   <div className="container-fluid">
     <Link className="navbar-brand" to="home">{props.mheading}, <small>{props.cname}</small></Link>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
