@@ -13,9 +13,7 @@ export function EmployeeForm(){
         experience:"",
         employeePic:""
     });
-   // employee.employeeId=employeeId;
-   // console.log(employee.employeeId);
-    
+  
     function getDetails(ev){
       // console.log(employee); 
         console.log(ev.target.value);
