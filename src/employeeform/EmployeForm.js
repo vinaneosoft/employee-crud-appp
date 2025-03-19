@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
+import { useParams } from "react-router";
 
 export function EmployeeForm(){
-
-
-
-    
+       let params= useParams();
+        console.log(params);
+        
     let [employee, setEmployee]=useState( {
         employeeId:"",
         employeeName:"",
@@ -39,6 +39,11 @@ export function EmployeeForm(){
         <div className="border border-5 border-info bg-dark text-white" style={{margin:'5px 100px'}}>
         <h4 className="text-center">Employee Form</h4>
         <form className="m-5">
+            <div className="mb-3">
+                <label htmlFor="employeeName" className="form-label">ID</label>
+                <input type="text" className="form-control" value={params.employeeId}
+                 id="employeeId" name="employeeId" readOnly/>
+            </div>
             <div className="mb-3">
                 <label htmlFor="employeeName" className="form-label">Name</label>
                 <input type="text" className="form-control" value={employee.employeeName} 
