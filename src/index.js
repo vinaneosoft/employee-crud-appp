@@ -35,8 +35,13 @@ let routes=[
         },
         {
             path:'addemployee',
-            element:<EmployeeForm></EmployeeForm>
+            element:<EmployeeForm></EmployeeForm> /** blank form */
         },
+        {
+            path:'editemployee/:employeeId',
+            element:<EmployeeForm></EmployeeForm> /** current details to edit */
+        },
+
         {
             path:'home',
             element:<Home></Home>,
@@ -56,11 +61,18 @@ let routes=[
   }
 ]
 // root path : http://localhost:3000/
-// http://localhost:3000/addemployee
+// root /childhttp://localhost:3000/addemployee
 //http://localhost:3000/employees
 //http://localhost:3000/home
 //http://localhost:3000/home/create
-//http://localhost:3000/home/read
+//root/child/child  http://localhost:3000/home/read
+
+//Q. if we want path like this then ?
+// localhost:3000/employeecrudapp/addemployee
+// localhost:3000/employeecrudapp/employees
+// localhost:3000/employeecrudapp/adminlogin
+// localhost:3000/employeecrudapp/home
+
 let browserRouter=createBrowserRouter(routes);
 
 

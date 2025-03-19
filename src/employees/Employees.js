@@ -44,6 +44,22 @@ export function Employees(){
             joiningDate:new Date('2 Dec 2018'),
             experience:5,
              employeePic:"https://www.nordstudio.ch/wp/wp-content/uploads/2018/02/mitarbeiter-business-fotos_08.jpg"
+        },
+        {
+            employeeId:116,
+            employeeName:"Pravin Pawar",
+            departmentCode:"JS",
+            joiningDate:new Date('2 Dec 2018'),
+            experience:5,
+             employeePic:"https://www.nordstudio.ch/wp/wp-content/uploads/2018/02/mitarbeiter-business-fotos_08.jpg"
+        },
+        {
+            employeeId:116,
+            employeeName:"Pravin Pawar",
+            departmentCode:"JS",
+            joiningDate:new Date('2 Dec 2018'),
+            experience:5,
+             employeePic:"https://www.nordstudio.ch/wp/wp-content/uploads/2018/02/mitarbeiter-business-fotos_08.jpg"
         }
       
     ]

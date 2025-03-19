@@ -1,16 +1,7 @@
+import { Link } from "react-router";
 
 /* single card design */
 export function EmployeeCard({employee}){
-
-    function showAlert(){
-        alert("Delete link clicked");
-    }
-
-    function showEmployeeId(id){
-        alert(id);
-    }
-
-
 
 
     return (
@@ -25,9 +16,8 @@ export function EmployeeCard({employee}){
                 <li className="list-group-item"><i>Experience : </i><b>{employee.experience} years</b></li>
             </ul>
             <div className="card-body">
-                <a href="#" className="card-link" onClick={()=>alert("Edit link clicked")}>EDIT</a>
-                <a href="#" className="card-link" onClick={showAlert}>DELETE</a> {/* ()=>showAlert()  */}
-                <a href="#" className="card-link" onClick={()=>{showEmployeeId(employee.employeeId)}}>test</a>
+                <Link to={`/editemployee/${employee.employeeId}`} className="card-link" >EDIT</Link>
+            
             </div>
         </div>
     );
