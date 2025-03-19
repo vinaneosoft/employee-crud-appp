@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App'; // u can use alias direct e.g.  import Ap from './App'; 
+import App from './App'; //  no {}, u can use alias direct e.g.  import Ap from './App'; 
 import reportWebVitals from './reportWebVitals';
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap/dist/js/bootstrap.bundle.min"
@@ -10,6 +10,9 @@ import { createBrowserRouter, redirect } from 'react-router';
 import { AdminLogin } from './adminlogin/AdminLogin';
 import { Employees } from './employees/Employees';
 import { EmployeeForm } from './employeeform/EmployeForm';
+import { Home } from './home/Home';
+import { Create } from './home/Create';
+import { Read } from './home/Read';
 
 let routes=[
   {
@@ -33,15 +36,31 @@ let routes=[
         {
             path:'addemployee',
             element:<EmployeeForm></EmployeeForm>
+        },
+        {
+            path:'home',
+            element:<Home></Home>,
+            children:[
+                {
+                    path:'create',
+                    element:<Create></Create>
+                },
+                {
+                    path:'read',
+                    element:<Read></Read>
+                }
+            ]
         }
-
 
     ]
   }
 ]
+// root path : http://localhost:3000/
 // http://localhost:3000/addemployee
-//http://localhost:3000/employees/addemployee
-//http://localhost:3000/addemployee
+//http://localhost:3000/employees
+//http://localhost:3000/home
+//http://localhost:3000/home/create
+//http://localhost:3000/home/read
 let browserRouter=createBrowserRouter(routes);
 
 

@@ -55,8 +55,8 @@ export function Employees(){
         <div>
             <Link className="btn btn-primary" to="/addemployee">ADD NEW</Link>
             <section className="d-flex flex-wrap justify-content-evenly bg-dark">
-            {empcards}
-        </section>
+                {empcards}
+            </section>
         </div>
         
     );

@@ -35,9 +35,9 @@ function App() {
       <Header mheading={mainHeading} cname={companyName}></Header> 
      <b>below header there will be dynamic section</b>
     
-      <div  className="border border-3">
+      
       <Outlet></Outlet> {/* Outlet component used to load child elements on route match*/}
-      </div>
+     
      
     <div>keep footer component here</div>
      </MyContext>
@@ -46,21 +46,6 @@ function App() {
 }
 
 
-
-
-
-
-
-
-
-
-function test1(){
-}
- function test2(){
-}
-
-
-export {test1, test2}
 
 export default App;
 
