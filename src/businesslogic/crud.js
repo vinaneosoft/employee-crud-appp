@@ -16,6 +16,14 @@ export async function deleteEmployeeById(id){
   else
     console.log(response);
 }
+
+export async function addEmployee(employee){
+  const response=await axios.post(url,employee);   // post request, data will be passed via body od the request
+  console.log(response);
+  return response.data;
+}
+
+
 /* in json file : 
  keep one key as id and its value as a string
  primary crud by json server will be done using this id key */
