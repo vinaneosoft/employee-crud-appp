@@ -1,7 +1,7 @@
 import { Link } from "react-router";
 import { EmployeeCard } from "../employeecard/EmployeeCard";
 import "./Employees.css";
-import { getEmployees } from "../businesslogic/crud";
+import { deleteEmployeeById, getEmployees } from "../businesslogic/crud";
 import { useEffect, useState } from "react";
 
 
@@ -13,15 +13,14 @@ export function Employees(){
 
     async  function getAllEmployees(){
         const data=  await getEmployees();
-        console.log(data);
+       // console.log(data);
         setEmployees(data);  // re-render
     }
 
-    function deleteEmployee(employeeId){
-        console.log("in delete function parent", employeeId);
-        
-        //delete logic
-      
+    async function deleteEmployee(id){
+        console.log("in delete function parent", id);
+        const data=await deleteEmployeeById(id); // crud 
+        console.log(data);     
     }
 
 

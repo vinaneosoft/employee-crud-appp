@@ -2,8 +2,6 @@ import { Link } from "react-router";
 
 /* single card design */
 export function EmployeeCard({employee, deleteEmployee}){
-
-
     return (
         <div className="card" style={{width: "18rem", margin:"10px"}}>
             <img src={employee.employeePic} className="card-img-top"  />
@@ -16,8 +14,8 @@ export function EmployeeCard({employee, deleteEmployee}){
                 <li className="list-group-item"><i>Experience : </i><b>{employee.experience} years</b></li>
             </ul>
             <div className="card-body">
-                <Link to={`/editemployee/${employee.employeeId}`} className="card-link" >EDIT</Link>
-                <button onClick={()=>deleteEmployee(employee.employeeId)} className="btn btn-link">DELETE</button>
+                <Link to={`/editemployee/${employee.id}`} className="card-link" >EDIT</Link>
+                <button onClick={()=>deleteEmployee(employee.id)} className="btn btn-link">DELETE</button>
             </div>
         </div>
     );
