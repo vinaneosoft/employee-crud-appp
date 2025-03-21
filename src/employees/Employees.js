@@ -4,21 +4,30 @@ import "./Employees.css";
 import { getEmployees } from "../businesslogic/crud";
 import { useEffect, useState } from "react";
 
+
+
+
 export function Employees(){
     // array of employees
     const [neoemployees, setEmployees]= useState([]); 
 
     async  function getAllEmployees(){
         const data=  await getEmployees();
-       // console.log("in Employee component");
         console.log(data);
-       // neoemployees=[...data]; // wrong
-       setEmployees(data);  // re-render
+        setEmployees(data);  // re-render
     }
+
+    function deleteEmployee(employeeId){
+        console.log("in delete function parent", employeeId);
+        
+        //delete logic
+      
+    }
+
 
     useEffect(()=>{
         console.log("Employees mounted");
-        getAllEmployees();
+        getAllEmployees(); // async call
         console.log("process continued......");
     }, []);
 
@@ -26,7 +35,7 @@ export function Employees(){
     solution : loader functions in routing : we will implement in searching*/
 
     /* mutiple cards : EmployeeCard: reused it  */
-    const empcards=neoemployees.map((employee, index)=><EmployeeCard key={"empcard"+index} employee={employee} />) 
+    const empcards=neoemployees.map((employee, index)=><EmployeeCard key={"empcard"+index} employee={employee} deleteEmployee={deleteEmployee}  />) 
     /*UI : JSX, JS{}*/
     return( 
         <div>

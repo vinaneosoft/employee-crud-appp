@@ -1,7 +1,7 @@
 import { Link } from "react-router";
 
 /* single card design */
-export function EmployeeCard({employee}){
+export function EmployeeCard({employee, deleteEmployee}){
 
 
     return (
@@ -17,7 +17,7 @@ export function EmployeeCard({employee}){
             </ul>
             <div className="card-body">
                 <Link to={`/editemployee/${employee.employeeId}`} className="card-link" >EDIT</Link>
-            
+                <button onClick={()=>deleteEmployee(employee.employeeId)} className="btn btn-link">DELETE</button>
             </div>
         </div>
     );

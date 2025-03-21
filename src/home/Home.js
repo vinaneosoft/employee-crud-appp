@@ -22,6 +22,27 @@ export function Home(){
                 and administrative dashboards to manage employee data efficiently.
                 It can be built using various programming languages, frameworks, and databases.
             </p>
+            <div id="carouselExample" className="carousel slide w-75">
+  <div className="carousel-inner">
+    <div className="carousel-item active">
+      <img src="https://th.bing.com/th/id/OIP.6dEHUdq-yfCqbEULVoOYKgHaE8?rs=1&pid=ImgDetMain" className="d-block w-100" alt="..."/>
+    </div>
+    <div className="carousel-item">
+      <img src="https://th.bing.com/th/id/OIP.6dEHUdq-yfCqbEULVoOYKgHaE8?rs=1&pid=ImgDetMain" className="d-block w-100" alt="..."/>
+    </div>
+    <div className="carousel-item">
+      <img src="https://th.bing.com/th/id/OIP.6dEHUdq-yfCqbEULVoOYKgHaE8?rs=1&pid=ImgDetMain" className="d-block w-100" alt="..."/>
+    </div>
+  </div>
+  <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span className="visually-hidden">Previous</span>
+  </button>
+  <button className="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span className="carousel-control-next-icon" aria-hidden="true"></span>
+    <span className="visually-hidden">Next</span>
+  </button>
+</div>
             <nav className="navbar navbar-expand-sm bg-body-tertiary">
             <div className="container-fluid">
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
