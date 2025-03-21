@@ -20,7 +20,11 @@ export function Employees(){
     async function deleteEmployee(id){
         console.log("in delete function parent", id);
         const data=await deleteEmployeeById(id); // crud 
-        console.log(data);     
+        if(data!=null){
+            alert(`Employee with id ${data.id} deleted successfully....`);
+            getAllEmployees();
+        }
+           
     }
 
 

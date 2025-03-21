@@ -9,9 +9,13 @@ export async function getEmployees(){
     console.log(response);
 }
 
-
 export async function deleteEmployeeById(id){
   const response=await axios.delete(`${url}/${id}`);  // delete request
-  console.log(response);
-  return response.data;
+  if(response.statusText=="OK")
+    return response.data;
+  else
+    console.log(response);
 }
+/* in json file : 
+ keep one key as id and its value as a string
+ primary crud by json server will be done using this id key */
