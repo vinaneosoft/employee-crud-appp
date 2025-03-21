@@ -19,10 +19,14 @@ export async function deleteEmployeeById(id){
 
 export async function addEmployee(employee){
   const response=await axios.post(url,employee);   // post request, data will be passed via body od the request
-  console.log(response);
-  return response.data;
+  if(response.statusText=="Created")
+    return response.data;
+  else
+    console.log(response);
 }
-
+statusText
+: 
+"Created"
 
 /* in json file : 
  keep one key as id and its value as a string
