@@ -2,6 +2,7 @@ import { Link } from "react-router";
 
 /* single card design */
 export function EmployeeCard({employee, deleteEmployee}){
+  
     return (
         <div className="card" style={{width: "18rem", margin:"10px"}}>
             <img src={employee.employeePic} className="card-img-top"  />

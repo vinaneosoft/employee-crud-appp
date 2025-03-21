@@ -30,7 +30,7 @@ export function Employees(){
 
     useEffect(()=>{
         console.log("Employees mounted");
-        getAllEmployees(); // async call
+        getAllEmployees(); // async call  // connected to external resource after rendering of component
         console.log("process continued......");
     }, []);
 

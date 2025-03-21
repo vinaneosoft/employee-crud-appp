@@ -24,9 +24,14 @@ export async function addEmployee(employee){
   else
     console.log(response);
 }
-statusText
-: 
-"Created"
+
+export async function getEmployeeById(id){
+  const response=await axios.get(`${url}/${id}`)
+  if(response.statusText=="OK")
+    return response.data;
+  else
+    console.log(response);
+} 
 
 /* in json file : 
  keep one key as id and its value as a string

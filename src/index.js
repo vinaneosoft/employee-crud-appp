@@ -13,6 +13,7 @@ import { EmployeeForm } from './employeeform/EmployeForm';
 import { Home } from './home/Home';
 import { Create } from './home/Create';
 import { Read } from './home/Read';
+import { getEmployeeById } from './businesslogic/crud';
 
 let routes=[
   {
@@ -38,8 +39,11 @@ let routes=[
             element:<EmployeeForm></EmployeeForm> /** blank form */
         },
         {
-            path:'editemployee/:employeeId',
-            element:<EmployeeForm></EmployeeForm> /** current details to edit */
+            path:'editemployee/:id',
+            element:<EmployeeForm></EmployeeForm> /** current details to edit */,
+            loader:async ({params})=>{
+                    return await getEmployeeById(params.id);
+            }
         },
 
         {
@@ -78,10 +82,7 @@ let browserRouter=createBrowserRouter(routes);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  
         <RouterProvider router={browserRouter}></RouterProvider>
-    
- 
 );
 
 // If you want to start measuring performance in your app, pass a function
