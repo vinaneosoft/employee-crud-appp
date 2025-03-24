@@ -11,7 +11,8 @@ export function EmployeeCard({employee, deleteEmployee}){
             className="card-img-top"  /> */}
            {/* <img src={employee.employeePic} className="card-img-top"  /> */}
            {/*  <img src="../resources/Soham Pawar.jpg" className="card-img-top"  /> */}
-           <img src={image1} className="card-img-top"  />
+         {/*   <img src={image1} className="card-img-top"  /> */}
+         <img src={require("../resources/"+employee.employeePic)} className="card-img-top"  /> 
             <div className="card-body">
                 <h5 className="card-title"><span>#{employee.id}</span> <span>{employee.employeeName}</span></h5>
             </div>
