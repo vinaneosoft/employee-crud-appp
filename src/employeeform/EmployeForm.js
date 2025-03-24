@@ -18,10 +18,12 @@ export function EmployeeForm(){
     let searchedemployee=useLoaderData(); /* id is available */
 
     function initialState(){
-        if(location.pathname.includes("editemployee"))
+    
+        if(location.pathname.includes("editemployee") && searchedemployee!=null)
            return searchedemployee;
         else
             return emptyemployee;
+       
     }   
     let [employee, setEmployee]=useState(()=>initialState());
   
@@ -48,6 +50,9 @@ export function EmployeeForm(){
             // routing without clicking on Link
             navigate("/employees"); // routing
         }
+        else{
+            alert("something went wrong while adding....");
+        }
     }
     async function updateEmp(event){
         event.preventDefault();
@@ -55,6 +60,9 @@ export function EmployeeForm(){
         if(data!=null){
             alert(`Employe with id ${data.id} updated successfully....`);
             navigate("/employees"); // routing
+        }
+        else{
+            alert("something went wrong while updating....");
         }
     }
     useEffect(()=>{
