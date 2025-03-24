@@ -14,15 +14,21 @@ export function Employees(){
     async  function getAllEmployees(){
         const data=  await getEmployees();
        // console.log(data);
+       if(data.length==0)
+            alert("NO RECORDS FOUND....");
         setEmployees(data);  // re-render
     }
 
     async function deleteEmployee(id){
         console.log("in delete function parent", id);
         const data=await deleteEmployeeById(id); // crud 
+       // console.log(data);
         if(data!=null){
             alert(`Employee with id ${data.id} deleted successfully....`);
             getAllEmployees();
+        }
+        else{
+            alert("Something went wrong while deleting....");
         }
            
     }
