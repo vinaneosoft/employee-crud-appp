@@ -108,8 +108,8 @@ export function EmployeeForm(){
             </div>
             <div className="mb-3">
                 <label htmlFor="employeePic" className="form-label">URL of your picture</label>
-                <input type="url" className="form-control" id="employeePic"  name="employeePic"
-                value={employee.employeePic} onChange={getDetails} required  />
+                <input type="text" className="form-control" id="employeePic"  name="employeePic"
+                value={employee.employeePic} onChange={getDetails}   />
             </div>
             <button type="submit" className="btn btn-primary">{location.pathname.includes("editemployee")?"UPDATE":"ADD"}</button>
             <button type="reset" className="btn btn-primary" onClick={clearForm}>RESET</button>

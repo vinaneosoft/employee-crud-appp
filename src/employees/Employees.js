@@ -3,10 +3,6 @@ import { EmployeeCard } from "../employeecard/EmployeeCard";
 import "./Employees.css";
 import { deleteEmployeeById, getEmployees } from "../businesslogic/crud";
 import { useEffect, useState } from "react";
-
-
-
-
 export function Employees(){
     // array of employees
     const [neoemployees, setEmployees]= useState([]); 
