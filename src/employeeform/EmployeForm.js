@@ -107,7 +107,7 @@ export function EmployeeForm(){
                 </select>
             </div>
             <div className="mb-3">
-                <label htmlFor="employeePic" className="form-label">Name of picture: <small>(Note: put name from resources folder from react)</small></label>
+                <label htmlFor="employeePic" className="form-label">Enter url of picture: <small>(Note: take image from network)</small></label>
                 <input type="text" className="form-control" id="employeePic"  name="employeePic"
                 value={employee.employeePic} onChange={getDetails}   />
             </div>
