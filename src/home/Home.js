@@ -1,4 +1,6 @@
 import { Link, Outlet } from "react-router";
+import { IncrementCounter } from "../learning/IncrementCounter";
+import { DecrementCounter } from "../learning/DecrementCounter";
 
 
 export function Home(){
@@ -43,25 +45,29 @@ export function Home(){
     <span className="visually-hidden">Next</span>
   </button>
 </div>
-            <nav className="navbar navbar-expand-sm bg-body-tertiary">
-            <div className="container-fluid">
-            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
-            </button>
-            <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                <li className="nav-item">
-                <Link className="nav-link" to="create">CREATE</Link>
-                </li>
-                <li className="nav-item">
-                <Link className="nav-link" to="read">READ</Link>
-                </li>
-            </ul>
-            </div>
-            </div>
-            </nav>
-            <Outlet></Outlet>
-        </main>
+    <nav className="navbar navbar-expand-sm bg-body-tertiary">
+    <div className="container-fluid">
+    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span className="navbar-toggler-icon"></span>
+    </button>
+    <div className="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+        <li className="nav-item">
+        <Link className="nav-link" to="create">CREATE</Link>
+        </li>
+        <li className="nav-item">
+        <Link className="nav-link" to="read">READ</Link>
+        </li>
+    </ul>
+    </div>
+    </div>
+    </nav>
+    <Outlet></Outlet>
+    <hr></hr>
+    <h4>Redux Store Example</h4>
+    <IncrementCounter></IncrementCounter>
+    <DecrementCounter></DecrementCounter>
+</main>
 
     );
 }
