@@ -14,6 +14,8 @@ import { Home } from './home/Home';
 import { Create } from './home/Create';
 import { Read } from './home/Read';
 import { getEmployeeById } from './businesslogic/crud';
+import { Provider } from 'react-redux';
+import { store } from './reduxstore/store';
 
 let routes=[
   {
@@ -82,7 +84,9 @@ let browserRouter=createBrowserRouter(routes);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-        <RouterProvider router={browserRouter}></RouterProvider>
+        <Provider store={store}>
+            <RouterProvider router={browserRouter}></RouterProvider>
+        </Provider>
 );
 
 // If you want to start measuring performance in your app, pass a function

@@ -10,7 +10,6 @@ import { Unmount } from './learning/Unmount';
 import { createContext, useState } from 'react';
 import { Outlet } from 'react-router';
 
-
 export let MyContext=createContext();
 /* UI merge  */
 
@@ -29,18 +28,15 @@ function App() {
   }, 3000);
   return (
    <>
-     <h1 className='mainHeading'>{mainHeading}, <small>{companyName}</small></h1> 
-     <b>{data.year}</b>
-     <MyContext value={data}>
-      <Header mheading={mainHeading} cname={companyName}></Header> 
-     <b>below header there will be dynamic section</b>
-    
-      
-      <Outlet></Outlet> {/* Outlet component used to load child elements on route match*/}
+          <h1 className='mainHeading'>{mainHeading}, <small>{companyName}</small></h1> 
+          <b>{data.year}</b>
+          <MyContext value={data}>
+            <Header mheading={mainHeading} cname={companyName}></Header> 
+          <b>below header there will be dynamic section</b>
+            <Outlet></Outlet> {/* Outlet component used to load child elements on route match*/}
+          <div>keep footer component here</div>
+          </MyContext>
      
-     
-    <div>keep footer component here</div>
-     </MyContext>
    </>
   );
 }
