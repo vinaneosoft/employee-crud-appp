@@ -41,8 +41,8 @@ export function Events(){
 
     function addLocation(newLoc){
        // let newarry=locations.map(loc=>loc);
-       // newarry.push(newLoc);
-        setNewLoc([...locations,newLoc]);
+       // newarry.push(newLoc); : wrrong 
+        setNewLoc([...locations,newLoc]); // immutable
     }
     return(<div>
        <section>

@@ -46,7 +46,7 @@ export function Hooks(){
                 <button onClick={()=>setCounter1(counter1+1)}>INCREMENT State variable</button>
                 <p>{counter2}</p>
                 <button onClick={()=>{
-                    setCounter2(counter2+1);
+                    setCounter2(counter2+1); // immutable logic
                 }}>INCREMENT state variable</button>
             </div>
             <hr></hr>
