@@ -10,8 +10,11 @@ export function IncrementCounter(){
         console.log(store.getState());
       }); */
     //useSelector, useDispatch : hooks not needed
-   const counter=useSelector((state)=>state.counter.value); // hook, Provider logic
-    return(
+   const counter=useSelector((state)=>state.counter.value); // listening for changes in state of store data, it gets called automatically when action is dispacthed on store
+   useEffect(()=>{
+    console.log(counter);
+  },[counter]); 
+   return(
         <div>
             <h5>IncrementCounter component</h5>
             <p>Counter from Store : {counter} </p>

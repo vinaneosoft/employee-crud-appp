@@ -2,6 +2,7 @@
 
 import './Header.css';
 import { Navbar } from '../navbar/Navbar';
+//import { useSelector } from 'react-redux';
 /* functional component */
 export function Header(props){
     const subHeading="EMPLOYEE OPERATIONS"; // local variable
@@ -12,10 +13,11 @@ export function Header(props){
         padding:'10px',
         color : 'white'
     }
-
+    //const counter=useSelector((state)=>state.counter.value);
     return(
         <header className="topheader" style={styleObj}>
             <h2>{subHeading}</h2>
+            <p>{counter}</p>
             <Navbar mheading={props.mheading} cname={props.cname}></Navbar>
         </header>
         
