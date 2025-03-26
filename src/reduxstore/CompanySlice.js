@@ -18,8 +18,6 @@ export const companySlice=createSlice({
            state.value.cbudget=state.value.cbudget+10000
         }
     }
-
-
 });
 
 export const {updateBudget}=companySlice.actions;

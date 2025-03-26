@@ -1,6 +1,7 @@
 import { Link, Outlet } from "react-router";
 import { IncrementCounter } from "../learning/IncrementCounter";
 import { DecrementCounter } from "../learning/DecrementCounter";
+import { Company } from "../learning/Company";
 
 
 export function Home(){
@@ -67,6 +68,8 @@ export function Home(){
     <h4>Redux Store Example</h4>
     <IncrementCounter></IncrementCounter>
     <DecrementCounter></DecrementCounter>
+    <hr></hr>
+    <Company></Company>
 </main>
 
     );
