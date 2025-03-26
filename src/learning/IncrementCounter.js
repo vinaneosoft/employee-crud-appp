@@ -1,6 +1,6 @@
 
 import { store } from "../reduxstore/store";
-import { increment } from "../reduxstore/reducers";
+import { increment } from "../reduxstore/CounterSlice";
 import { useEffect } from "react";
 import { useSelector } from "react-redux";
 
