@@ -1,8 +1,10 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { updateBudget } from "../reduxstore/CompanySlice";
 
 
 export function Company() {
     const neoobject=useSelector((state)=>state.company.value);
+    const dispatch=useDispatch();
     return (
         <section>
              <h4>Company Details</h4>
@@ -11,7 +13,7 @@ export function Company() {
                 <li> {neoobject.cname}</li>
                 <li> {neoobject.cbudget}</li>
              </ol>
-             <button className="btn btn-secondary">UPDATE BUDGET</button>
+             <button onClick={()=>dispatch(updateBudget())}   className="btn btn-secondary">UPDATE BUDGET</button>
         </section>
     );
 }

@@ -16,6 +16,7 @@ import { Read } from './home/Read';
 import { getEmployeeById } from './businesslogic/crud';
 import { Provider } from 'react-redux';
 import { store } from './reduxstore/store';
+import { CookiesProvider } from 'react-cookie';
 
 let routes=[
   {
@@ -85,7 +86,9 @@ let browserRouter=createBrowserRouter(routes);
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
         <Provider store={store}>
-            <RouterProvider router={browserRouter}></RouterProvider>
+            <CookiesProvider>
+                <RouterProvider router={browserRouter}></RouterProvider>
+            </CookiesProvider>
         </Provider>
 );
 

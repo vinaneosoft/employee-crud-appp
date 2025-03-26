@@ -6,6 +6,6 @@ import { companySlice } from "./CompanySlice";
 export const store=configureStore({
     reducer:{
         counter:counterSlice.reducer, // use this key in useSelector
-        company:companySlice.reducer
+        company:companySlice.reducer // use this key in useSelector
     }
 });

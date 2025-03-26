@@ -17,7 +17,7 @@ export function Header(props){
     return(
         <header className="topheader" style={styleObj}>
             <h2>{subHeading}</h2>
-            <p>{counter}</p>
+          
             <Navbar mheading={props.mheading} cname={props.cname}></Navbar>
         </header>
         
