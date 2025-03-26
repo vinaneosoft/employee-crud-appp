@@ -18,6 +18,7 @@ export function AdminLogin(){
         if(admin.emailid==email.current.value && admin.password==password.current.value){
             setCookie("admin", admin.emailid);
             alert("you are logged in successfully....");
+            setMessage("");
             navigate("/home");
         }
         else{

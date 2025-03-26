@@ -86,7 +86,7 @@ let browserRouter=createBrowserRouter(routes);
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
         <Provider store={store}>
-            <CookiesProvider>
+            <CookiesProvider >
                 <RouterProvider router={browserRouter}></RouterProvider>
             </CookiesProvider>
         </Provider>
