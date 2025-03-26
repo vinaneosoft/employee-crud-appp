@@ -6,7 +6,7 @@ import { useNavigate } from "react-router";
 
 export function AdminLogin(){
     let [errorMessage, setMessage]=useState("");
-    const [cookies, setCookie, removeCookie] =useCookies();
+    const [cookies, setCookie] =useCookies();
     const navigate=useNavigate();
     const email=useRef();
     const password=useRef();
