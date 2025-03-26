@@ -2,9 +2,11 @@ import { Link } from "react-router";
 
 import image1 from "../resources/Pooja Patil.jpg";
 import image2 from "../resources/Soham Pawar.jpg";
+import { useCookies } from "react-cookie";
+
 /* single card design */
 export function EmployeeCard({employee, deleteEmployee}){
-  
+  const [cookies, setCookie, removeCookie]=useCookies();// listener
     return (
         <div className="card" style={{width: "18rem", margin:"10px"}}>
             {/* <img src="https://imageio.forbes.com/specials-images/imageserve/609946db7c398a0de6c94893/0x0.jpg?format=jpg&height=900&width=1600&fit=bounds" 
@@ -22,8 +24,12 @@ export function EmployeeCard({employee, deleteEmployee}){
                 <li className="list-group-item"><i>Experience : </i><b>{employee.experience} years</b></li>
             </ul>
             <div className="card-body">
-                <Link to={`/editemployee/${employee.id}`} className="card-link" >EDIT</Link>
-                <button onClick={()=>deleteEmployee(employee.id)} className="btn btn-link">DELETE</button>
+            {cookies.admin!=undefined &&
+               <>
+                    <Link to={`/editemployee/${employee.id}`} className="card-link" >EDIT</Link>
+                    <button onClick={()=>deleteEmployee(employee.id)} className="btn btn-link">DELETE</button>
+                </>
+            }
             </div>
         </div>
     );

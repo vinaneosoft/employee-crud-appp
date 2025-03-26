@@ -5,9 +5,8 @@ import { Link } from "react-router";
 
 export function Navbar(props){
   // getting cookies
-  const [cookies, setCookie, removeCookie]=useCookies();// listener
-  console.log(cookies.admin);
-  
+ const [cookies, setCookie, removeCookie]=useCookies();// listener
+ 
   function logout(){
     removeCookie("admin");
     alert("logged out....");

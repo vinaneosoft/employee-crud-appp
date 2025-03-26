@@ -4,10 +4,11 @@ import "./Employees.css";
 import { deleteEmployeeById, getEmployees } from "../businesslogic/crud";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
+import { useCookies } from "react-cookie";
 
 export function Employees(){
     const neoobject=useSelector((state)=>state.company.value);
-
+const [cookies, setCookie, removeCookie]=useCookies();// listener
     // array of employees
     const [neoemployees, setEmployees]= useState([]); 
 
@@ -48,7 +49,9 @@ export function Employees(){
     /*UI : JSX, JS{}*/
     return( 
         <div>
-            <Link className="btn btn-primary" to="/addemployee">ADD NEW</Link>
+             {cookies.admin!=undefined &&
+                <Link className="btn btn-primary" to="/addemployee">ADD NEW</Link>
+             }
             <p>Company Budget : {neoobject.cbudget}</p>
            
             <section className="d-flex flex-wrap justify-content-evenly bg-dark">
