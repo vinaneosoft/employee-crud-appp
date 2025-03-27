@@ -13,7 +13,7 @@ export function Company() {
                 <li> {neoobject.cname}</li>
                 <li> {neoobject.cbudget}</li>
              </ol>
-             <button onClick={()=>dispatch(updateBudget())}   className="btn btn-secondary">UPDATE BUDGET</button>
+             <button onClick={()=>dispatch(updateBudget(6000))}   className="btn btn-secondary">UPDATE BUDGET</button>
         </section>
     );
 }
