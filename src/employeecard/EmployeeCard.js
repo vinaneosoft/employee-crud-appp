@@ -6,7 +6,8 @@ import { useCookies } from "react-cookie";
 
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
-import { Tooltip } from "@mui/material";
+import { Button, Tooltip } from "@mui/material";
+
 /* single card design */
 export function EmployeeCard({employee, deleteEmployee}){
   const [cookies, setCookie, removeCookie]=useCookies();// listener
@@ -31,10 +32,15 @@ export function EmployeeCard({employee, deleteEmployee}){
             <div className="card-body d-flex justify-content-between">
             {cookies.admin!=undefined ?
                <>
-                    <Link to={`/editemployee/${employee.id}`} className="card-link" >
-                    <Tooltip title="edit employee" placement="right"><EditIcon color="secondary" />
-                    </Tooltip></Link>
-                    <button onClick={()=>deleteEmployee(employee.id)} className="btn btn-link"><DeleteIcon color="error" /></button>
+                    <Button LinkComponent={Link} to={`/editemployee/${employee.id}`} >
+                        <Tooltip title="edit employee" placement="right">
+                            <EditIcon color="secondary" />
+                        </Tooltip>
+                    </Button>
+                    <Button onClick={()=>deleteEmployee(employee.id)}>
+                        <DeleteIcon color="error" />
+                    </Button>
+    
                 </>
                 :
                 <small>please login to update the details</small>
