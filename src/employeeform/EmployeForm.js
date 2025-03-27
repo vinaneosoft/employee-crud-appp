@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useLoaderData, useLocation, useNavigate, useParams } from "react-router";
 import { addEmployee, updateEmployee } from "../businesslogic/crud";
+import  Button  from "@mui/material/Button";
 
 export function EmployeeForm(){
     let {id}= useParams(); // id of employee to be searched
@@ -111,8 +112,9 @@ export function EmployeeForm(){
                 <input type="text" className="form-control" id="employeePic"  name="employeePic"
                 value={employee.employeePic} onChange={getDetails}   />
             </div>
-            <button type="submit" className="btn btn-primary">{location.pathname.includes("editemployee")?"UPDATE":"ADD"}</button>
-            <button type="reset" className="btn btn-primary" onClick={clearForm}>RESET</button>
+            <Button className="m-2" type="submit" variant="contained" color="secondary">{location.pathname.includes("editemployee")?"UPDATE":"ADD"}</Button>
+            <Button type="reset" variant="contained" color="secondary" onClick={clearForm}>RESET</Button>
+            
         </form>
         </div>
       

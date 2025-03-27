@@ -5,7 +5,7 @@ import { Link } from "react-router";
 
 export function Navbar(props){
   // getting cookies
- const [cookies, setCookie, removeCookie]=useCookies();// listener
+ const [cookies, ,removeCookie]=useCookies();// listener
  
   function logout(){
     removeCookie("admin");

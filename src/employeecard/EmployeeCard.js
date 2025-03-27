@@ -4,6 +4,9 @@ import image1 from "../resources/Pooja Patil.jpg";
 import image2 from "../resources/Soham Pawar.jpg";
 import { useCookies } from "react-cookie";
 
+import DeleteIcon from '@mui/icons-material/Delete';
+import EditIcon from '@mui/icons-material/Edit';
+import { Tooltip } from "@mui/material";
 /* single card design */
 export function EmployeeCard({employee, deleteEmployee}){
   const [cookies, setCookie, removeCookie]=useCookies();// listener
@@ -18,17 +21,23 @@ export function EmployeeCard({employee, deleteEmployee}){
             <div className="card-body">
                 <h5 className="card-title"><span>#{employee.id}</span> <span>{employee.employeeName}</span></h5>
             </div>
+
+
             <ul className="list-group list-group-flush">
                 <li className="list-group-item"><i>Department Code : </i><b>{employee.departmentCode}</b></li>
                 <li className="list-group-item"><i>Joined on  </i><b>{employee.joiningDate.toString()}</b></li>
                 <li className="list-group-item"><i>Experience : </i><b>{employee.experience} years</b></li>
             </ul>
-            <div className="card-body">
-            {cookies.admin!=undefined &&
+            <div className="card-body d-flex justify-content-between">
+            {cookies.admin!=undefined ?
                <>
-                    <Link to={`/editemployee/${employee.id}`} className="card-link" >EDIT</Link>
-                    <button onClick={()=>deleteEmployee(employee.id)} className="btn btn-link">DELETE</button>
+                    <Link to={`/editemployee/${employee.id}`} className="card-link" >
+                    <Tooltip title="edit employee" placement="right"><EditIcon color="secondary" />
+                    </Tooltip></Link>
+                    <button onClick={()=>deleteEmployee(employee.id)} className="btn btn-link"><DeleteIcon color="error" /></button>
                 </>
+                :
+                <small>please login to update the details</small>
             }
             </div>
         </div>

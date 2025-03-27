@@ -18,6 +18,11 @@ import { Provider } from 'react-redux';
 import { store } from './reduxstore/store';
 import { CookiesProvider } from 'react-cookie';
 
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
+
 let routes=[
   {
     path:'/',
@@ -39,7 +44,8 @@ let routes=[
         },
         {
             path:'addemployee',
-            element:<EmployeeForm></EmployeeForm> /** blank form */
+            element:
+                <EmployeeForm></EmployeeForm>
         },
         {
             path:'editemployee/:id',

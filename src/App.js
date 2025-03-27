@@ -32,7 +32,7 @@ function App() {
           <b>{data.year}</b>
           <MyContext value={data}>
             <Header mheading={mainHeading} cname={companyName}></Header> 
-          <b>below header there will be dynamic section</b>
+    
             <Outlet></Outlet> {/* Outlet component used to load child elements on route match*/}
           <div>keep footer component here</div>
           </MyContext>
@@ -52,3 +52,4 @@ export default App;
 // from one module we can export n properties
 // u can export more than one pr with normal export
 // u can export only one pr as default export
+
