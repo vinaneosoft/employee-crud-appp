@@ -22,15 +22,17 @@ const [cookies]=useCookies();// listener
     }
 
     async function deleteEmployee(id){
-        console.log("in delete function parent", id);
-        const data=await deleteEmployeeById(id); // crud 
-       // console.log(data);
-        if(data!=null){
-            alert(`Employee with id ${data.id} deleted successfully....`);
-            getAllEmployees();
-        }
-        else{
-            alert("Something went wrong while deleting....");
+        const b=window.confirm("Do you really want to delete???");
+        if(b){
+            const data=await deleteEmployeeById(id); // crud 
+            // console.log(data);
+             if(data!=null){
+                 alert(`Employee with id ${data.id} deleted successfully....`);
+                 getAllEmployees();
+             }
+             else{
+                 alert("Something went wrong while deleting....");
+             }
         }
            
     }

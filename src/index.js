@@ -22,6 +22,7 @@ import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
+import { RouteGuard } from './routeguard/RouteGuard';
 
 let routes=[
   {
@@ -45,11 +46,17 @@ let routes=[
         {
             path:'addemployee',
             element:
+            <RouteGuard>
                 <EmployeeForm></EmployeeForm>
+            </RouteGuard>
         },
         {
             path:'editemployee/:id',
-            element:<EmployeeForm></EmployeeForm> /** current details to edit */,
+            element:
+             <RouteGuard>
+                <EmployeeForm></EmployeeForm>
+            </RouteGuard>
+            /** current details to edit */,
             loader:async ({params})=>{
                     return await getEmployeeById(params.id);
             }
