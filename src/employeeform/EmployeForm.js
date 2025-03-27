@@ -104,7 +104,7 @@ export function EmployeeForm(){
                     <option value="AD">Android</option>
                     <option value="IOS">IOS</option>
                     <option value="PHP">PHP</option>
-                    <option value="RJS">ReactJS</option>
+                    <option value="RJS" className="text-wrap" style={{width: "6rem"}}>ReactJS hbsjadsjfjdsbfdfdgjfdghffghkjf hbsjadsjfjdsbfdfdgjfdghffghkjf</option>
                 </select>
             </div>
             <div className="mb-3">

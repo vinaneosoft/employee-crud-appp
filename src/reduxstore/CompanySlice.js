@@ -13,9 +13,9 @@ export const companySlice=createSlice({
         }
     },
     reducers:{
-        updateBudget:(state)=>{
+        updateBudget:(state, payload)=>{
            // return {...state.value, cbudget:state.value.cbudget+10000} // immutable
-           state.value.cbudget=state.value.cbudget+10000
+           state.value.cbudget=state.value.cbudget+payload
         }
     }
 });

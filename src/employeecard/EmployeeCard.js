@@ -38,7 +38,9 @@ export function EmployeeCard({employee, deleteEmployee}){
                         </Tooltip>
                     </Button>
                     <Button onClick={()=>deleteEmployee(employee.id)}>
-                        <DeleteIcon color="error" />
+                        <Tooltip title="delete employee" placement="left">
+                            <DeleteIcon color="error" />
+                        </Tooltip>
                     </Button>
     
                 </>
