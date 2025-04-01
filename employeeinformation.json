@@ -1,0 +1,20 @@
+{
+  "employeeinfo": [
+    {
+      "id": "8e9e",
+      "employeeName": "Rutuja Pawar",
+      "departmentCode": "JS",
+      "joiningDate": "2025-03-17T13:57",
+      "experience": "12",
+      "employeePic": "https://freerangestock.com/sample/147512/portrait-of-female-employee-smiling-at-the-camera.jpg"
+    },
+    {
+      "id": "bd53",
+      "employeeName": "Pooja Patil",
+      "departmentCode": "PHP",
+      "joiningDate": "2025-03-02T14:27",
+      "experience": "40",
+      "employeePic": "https://imageio.forbes.com/specials-images/imageserve/609946db7c398a0de6c94893/0x0.jpg?format=jpg&height=900&width=1600&fit=bounds"
+    }
+  ]
+}

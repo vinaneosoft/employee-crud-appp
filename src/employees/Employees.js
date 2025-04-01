@@ -2,7 +2,7 @@ import { Link } from "react-router";
 import { EmployeeCard } from "../employeecard/EmployeeCard";
 import "./Employees.css";
 import { deleteEmployeeById, getEmployees } from "../businesslogic/crud";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useSelector } from "react-redux";
 import { useCookies } from "react-cookie";
 import { Button } from "@mui/material";
@@ -12,13 +12,16 @@ export function Employees(){
 const [cookies]=useCookies();// listener
     // array of employees
     const [neoemployees, setEmployees]= useState([]); 
-
+    const search=useRef();
+    const [key, setKey]=useState("id");
+    let allemployees =useRef([]);
     async  function getAllEmployees(){
         const data=  await getEmployees();
        // console.log(data);
        if(data.length==0)
             alert("NO RECORDS FOUND....");
         setEmployees(data);  // re-render
+        allemployees.current.value=[...data];
     }
 
     async function deleteEmployee(id){
@@ -36,7 +39,16 @@ const [cookies]=useCookies();// listener
         }
            
     }
-
+    function searchEmployee(){
+        if(search.current.value!=""){
+            const found=allemployees.current.value
+            .filter((employee)=>employee[key].includes(search.current.value));
+             setEmployees(found)
+        }
+        else{
+            setEmployees(allemployees.current.value)
+        }
+    }
 
     useEffect(()=>{
         console.log("Employees mounted");
@@ -59,7 +71,17 @@ const [cookies]=useCookies();// listener
                 :
                 <small>please login to add details</small>
              }
-          
+            <section>
+                <label>Search By:</label>
+                <select value={key} onChange={(e)=>setKey(e.target.value)}>
+                    <option value="id">ID</option>
+                    <option value="employeeName">NAME</option>
+                    <option value="departmentCode">Department</option>
+                    <option value="experience">Experience</option>
+                    <option value="joiningDate">JOINING DATE</option>
+                </select>
+                <input type="text" ref={search} onKeyUp={searchEmployee}></input>
+            </section>
             <section className="d-flex flex-wrap justify-content-evenly bg-dark">
                 {empcards}
             </section>
